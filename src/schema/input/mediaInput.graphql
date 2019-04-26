@@ -1,0 +1,4 @@
+input MediaInput {
+  id: Int
+  type: String
+}

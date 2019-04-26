@@ -1,0 +1,5 @@
+type Media {
+  id: Int
+  type: String
+  mediaitems: [MediaItem]
+}

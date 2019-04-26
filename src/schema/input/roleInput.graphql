@@ -1,0 +1,4 @@
+input RoleInput {
+  id: Int
+  role: String
+}

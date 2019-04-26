@@ -1,0 +1,9 @@
+type MediaItem {
+  id: Int
+  path: String
+  extension: String
+  size: String
+  media: Media
+  created_at: String
+  updated_at: String
+}

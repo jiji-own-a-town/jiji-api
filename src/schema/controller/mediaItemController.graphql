@@ -1,0 +1,15 @@
+type Query {
+  getMediaItems(
+    ids: [Int]
+    limit: Int
+    offset: Int
+    sortBy: String
+  ): [MediaItem]
+}
+
+type Mutation {
+  addMediaItems(mediaItems: [MediaItemInput]!): String
+  addEntityMediaItems(mediaItems: [MediaItemInput]!): String
+  editMediaItems(mediaItems: [MediaItemInput]!): String
+  deleteMediaItems(ids: [Int]!): String
+}

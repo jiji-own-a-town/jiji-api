@@ -1,0 +1,14 @@
+type User {
+  id: Int
+  email: String
+  password: String
+  active: Int
+  group_id: Int
+  role: Role
+  phone: String
+  avi: MediaItem
+  first_name: String
+  last_name: String
+  created_at: String
+  accessToken: String
+}

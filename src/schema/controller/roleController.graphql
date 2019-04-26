@@ -1,0 +1,9 @@
+type Query {
+  getRoles(ids: [Int], limit: Int, offset: Int, sortBy: String): [Role]
+}
+
+type Mutation {
+  addRoles(roles: [RoleInput]!): String
+  editRoles(roles: [RoleInput]!): String
+  deleteRoles(ids: [Int]!): String
+}

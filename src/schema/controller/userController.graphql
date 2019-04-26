@@ -1,0 +1,12 @@
+type Query {
+  login(login: LoginInput!): User
+  # oAuthLogin(login: GoogleLoginInput!):SocialMediaUser,
+  # googleLogin(login: GoogleLoginInput!):GoogleUser,
+  getUsers(ids: [Int], limit: Int, offset: Int, sortBy: String): [User]
+}
+
+type Mutation {
+  addUsers(users: [UserInput]!): String
+  editUsers(users: [UserInput]!): String
+  deleteUsers(ids: [Int]!): String
+}

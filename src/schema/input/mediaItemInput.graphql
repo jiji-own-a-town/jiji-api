@@ -1,0 +1,7 @@
+input MediaItemInput {
+  id: Int
+  path: String
+  extension: String
+  size: String
+  media: MediaInput
+}

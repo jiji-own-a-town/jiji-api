@@ -5,12 +5,13 @@
   "author": "Kibuthi-Allan",
   "main": "index.js",
   "scripts": {
-    "format": "prettier --write \"**/*.ts\"",
+    "format": "prettier --write \"src/*.{ts,js,graphql,json}\" --write \"src/**/*.{ts,js,graphql,json}\" --write \"*.{ts,js,graphql,json}\"",
     "start": "ts-node -r tsconfig-paths/register src/index.ts",
     "start:dev": "nodemon",
     "prestart:prod": "rm -rf dist && tsc",
     "start:prod": "ts-node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon -e ts,graphql"
   },
   "keywords": [
     "api",

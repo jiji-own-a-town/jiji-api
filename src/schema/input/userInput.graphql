@@ -1,0 +1,10 @@
+input UserInput {
+  id: Int
+  email: String
+  password: String
+  role: RoleInput
+  phone: String
+  first_name: String
+  last_name: String
+  mediaItem: MediaItemInput
+}

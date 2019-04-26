@@ -1,0 +1,5 @@
+type Role {
+  id: Int
+  role: String
+  users: [User]
+}
