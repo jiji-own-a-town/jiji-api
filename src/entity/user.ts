@@ -9,6 +9,9 @@ import {
   Index
 } from "typeorm";
 
+import { Role } from "./role";
+import { MediaItem } from "./mediaItem";
+
 @Entity({ name: "users" })
 export class User {
   @PrimaryGeneratedColumn()
@@ -21,7 +24,7 @@ export class User {
   last_name: string;
 
   @Column()
-  @Index("email-idx", { unique: true, nullable: false })
+  @Index("email-idx", { unique: true })
   email: string;
 
   @Column({ select: true })
@@ -43,9 +46,13 @@ export class User {
   @Column({ nullable: true })
   phone: string;
 
+  @OneToOne(type => MediaItem, mediaItem => mediaItem.user, { nullable: true })
+  @JoinColumn({ name: "avi" })
+  mediaItem: MediaItem;
+
   //Uses user resolver
   accessToken: string;
 
-  @OneToOne(type => UserToken, userToken => userToken.user)
-  userToken: UserToken;
+  // @OneToOne(type => UserToken, userToken => userToken.user)
+  // userToken: UserToken;
 }
